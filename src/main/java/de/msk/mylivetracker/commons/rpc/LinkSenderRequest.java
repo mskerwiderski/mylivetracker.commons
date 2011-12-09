@@ -1,6 +1,5 @@
 package de.msk.mylivetracker.commons.rpc;
 
-
 /**
  * LinkSenderRequest.
  * 
