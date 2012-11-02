@@ -1,7 +1,5 @@
 package de.msk.mylivetracker.commons.rpc;
 
-
-
 /**
  * LinkSenderResponse.
  * 
@@ -10,7 +8,8 @@ package de.msk.mylivetracker.commons.rpc;
  * @version 000
  * 
  * history
- * 000 initial 2011-08-14
+ * 001 2012-11-02 statusParamsId added.
+ * 000 2011-08-14 initial.
  * 
  */
 public class LinkSenderResponse extends RpcResponse {
@@ -23,7 +22,8 @@ public class LinkSenderResponse extends RpcResponse {
 	private String senderName;
 	private String senderUsername;
 	private String senderPassword;
-	private String trackName;		
+	private String trackName;	
+	private String statusParamsId;
 	
 	public LinkSenderResponse() {		
 	}
@@ -43,7 +43,8 @@ public class LinkSenderResponse extends RpcResponse {
 		String locale, ResultCode resultCode,
 		String serverAddress, Integer serverPort,
 		String senderId, String senderName, String senderUsername,
-		String senderPassword, String trackName) {
+		String senderPassword, String trackName,
+		String statusParamsId) {
 		super(locale, resultCode);
 		this.serverAddress = serverAddress;
 		this.serverPort = serverPort;
@@ -52,116 +53,65 @@ public class LinkSenderResponse extends RpcResponse {
 		this.senderUsername = senderUsername;
 		this.senderPassword = senderPassword;
 		this.trackName = trackName;
+		this.statusParamsId = statusParamsId;
 	}
 
-	/**
-	 * @return the serverAddress
-	 */
 	public String getServerAddress() {
 		return serverAddress;
 	}
-
-	/**
-	 * @param serverAddress the serverAddress to set
-	 */
 	public void setServerAddress(String serverAddress) {
 		this.serverAddress = serverAddress;
 	}
-
-	/**
-	 * @return the serverPort
-	 */
 	public Integer getServerPort() {
 		return serverPort;
 	}
-
-	/**
-	 * @param serverPort the serverPort to set
-	 */
 	public void setServerPort(Integer serverPort) {
 		this.serverPort = serverPort;
 	}
-
-	/**
-	 * @return the senderId
-	 */
 	public String getSenderId() {
 		return senderId;
 	}
-
-	/**
-	 * @param senderId the senderId to set
-	 */
 	public void setSenderId(String senderId) {
 		this.senderId = senderId;
 	}
-
-	/**
-	 * @return the senderName
-	 */
 	public String getSenderName() {
 		return senderName;
 	}
-
-	/**
-	 * @param senderName the senderName to set
-	 */
 	public void setSenderName(String senderName) {
 		this.senderName = senderName;
 	}
-
-	/**
-	 * @return the senderUsername
-	 */
 	public String getSenderUsername() {
 		return senderUsername;
 	}
-
-	/**
-	 * @param senderUsername the senderUsername to set
-	 */
 	public void setSenderUsername(String senderUsername) {
 		this.senderUsername = senderUsername;
 	}
-
-	/**
-	 * @return the senderPassword
-	 */
 	public String getSenderPassword() {
 		return senderPassword;
 	}
-
-	/**
-	 * @param senderPassword the senderPassword to set
-	 */
 	public void setSenderPassword(String senderPassword) {
 		this.senderPassword = senderPassword;
 	}
-
-	/**
-	 * @return the trackName
-	 */
 	public String getTrackName() {
 		return trackName;
 	}
-
-	/**
-	 * @param trackName the trackName to set
-	 */
 	public void setTrackName(String trackName) {
 		this.trackName = trackName;
 	}
+	public String getStatusParamsId() {
+		return statusParamsId;
+	}
+	public void setStatusParamsId(String statusParamsId) {
+		this.statusParamsId = statusParamsId;
+	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "LinkSenderResponse [serverAddress=" + serverAddress
 			+ ", serverPort=" + serverPort + ", senderId=" + senderId
 			+ ", senderName=" + senderName + ", senderUsername="
 			+ senderUsername + ", senderPassword=" + senderPassword
-			+ ", trackName=" + trackName + ", resultCode=" + resultCode
-			+ ", resultMessage=" + resultMessage + "]";
-	}	
+			+ ", trackName=" + trackName + ", statusParamsId="
+			+ statusParamsId + "]";
+	}
 }
