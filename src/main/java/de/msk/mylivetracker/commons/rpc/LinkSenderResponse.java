@@ -8,7 +8,6 @@ package de.msk.mylivetracker.commons.rpc;
  * @version 000
  * 
  * history
- * 001 2012-11-02 statusParamsId added.
  * 000 2011-08-14 initial.
  * 
  */
@@ -23,7 +22,6 @@ public class LinkSenderResponse extends RpcResponse {
 	private String senderUsername;
 	private String senderPassword;
 	private String trackName;	
-	private String statusParamsId;
 	
 	public LinkSenderResponse() {		
 	}
@@ -53,7 +51,6 @@ public class LinkSenderResponse extends RpcResponse {
 		this.senderUsername = senderUsername;
 		this.senderPassword = senderPassword;
 		this.trackName = trackName;
-		this.statusParamsId = statusParamsId;
 	}
 
 	public String getServerAddress() {
@@ -98,20 +95,17 @@ public class LinkSenderResponse extends RpcResponse {
 	public void setTrackName(String trackName) {
 		this.trackName = trackName;
 	}
-	public String getStatusParamsId() {
-		return statusParamsId;
-	}
-	public void setStatusParamsId(String statusParamsId) {
-		this.statusParamsId = statusParamsId;
-	}
 
 	@Override
 	public String toString() {
-		return "LinkSenderResponse [serverAddress=" + serverAddress
-			+ ", serverPort=" + serverPort + ", senderId=" + senderId
-			+ ", senderName=" + senderName + ", senderUsername="
-			+ senderUsername + ", senderPassword=" + senderPassword
-			+ ", trackName=" + trackName + ", statusParamsId="
-			+ statusParamsId + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("LinkSenderResponse [serverAddress=")
+			.append(serverAddress).append(", serverPort=")
+			.append(serverPort).append(", senderId=").append(senderId)
+			.append(", senderName=").append(senderName)
+			.append(", senderUsername=").append(senderUsername)
+			.append(", senderPassword=").append(senderPassword)
+			.append(", trackName=").append(trackName).append("]");
+		return builder.toString();
 	}
 }

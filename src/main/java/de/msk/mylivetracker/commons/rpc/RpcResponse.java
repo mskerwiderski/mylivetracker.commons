@@ -24,10 +24,13 @@ public abstract class RpcResponse implements Serializable {
 	public enum ResultCode {
 		Ok(0),
 		InternalServerError(-1),
+		InvalidData(-2),
 		InvalidInputParams(-10),
 		InvalidPortalUsernamePassword(-20),
 		SenderIdNotAllowed(-30),
-		SenderCountLimitReached(-40);
+		SenderCountLimitReached(-40),
+		SenderNotAuthorized(-50),
+		ProtocolVersionNotSupported(-100);
 		private int code;
 		private ResultCode(int code) {
 			this.code = code;			
