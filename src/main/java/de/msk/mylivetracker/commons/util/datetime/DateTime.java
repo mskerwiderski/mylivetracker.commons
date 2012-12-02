@@ -38,7 +38,6 @@ public class DateTime implements Serializable {
 	public static final String STD_DATE_FORMAT = "yyyy-MM-dd";	
 	public static final String PRETTY_DATE_TIME_FORMAT = "dd.MM.yyyy HH:mm:ss";
 	public static final String PRETTY_DATE_FORMAT = "dd.MM.yyyy";
-	
 	public static final String INTERNAL_DATE_TIME_FMT = "yyyyMMddHHmmssSSS";
 	public static final String INTERNAL_DATE_FMT = "yyyyMMdd";
 	public static final String INTERNAL_TIME_DAY_BEGINS = "000000000";
@@ -46,6 +45,28 @@ public class DateTime implements Serializable {
 	
 	private String dateTimeStrAsUtc = null;	
 	private Date javaDateObjAsUtc = null;
+	
+	/**
+	 * gets current date time as formatted string.
+	 * @param timeZone - the requested time zone of the date time string.
+	 * @param dateTimeStrFmt - the requested format of the date time string.
+	 * @return the formatted current date time string.
+	 */
+	public static String getCurrentAsStr(TimeZone timeZone, String dateTimeStrFmt) {
+		DateTime dateTime = new DateTime();
+		return dateTime.getAsStr(timeZone, dateTimeStrFmt);
+	}
+	
+	/**
+	 * gets current utc date time as formatted string.
+	 * @param timeZone - the requested time zone of the date time string.
+	 * @param dateTimeStrFmt - the requested format of the date time string.
+	 * @return the formatted current utc date time string.
+	 */
+	public static String getCurrentAsUtcStr(String dateTimeStrFmt) {
+		DateTime dateTime = new DateTime();
+		return dateTime.getAsStr(TimeZone.getTimeZone(TIME_ZONE_UTC), dateTimeStrFmt);
+	}
 	
 	/**
 	 * throws a runtime exception if given parse exception is not null.
