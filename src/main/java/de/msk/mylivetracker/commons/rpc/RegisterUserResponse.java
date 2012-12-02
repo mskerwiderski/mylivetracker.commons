@@ -34,13 +34,11 @@ public class RegisterUserResponse extends LinkSenderResponse {
 		String locale, ResultCode resultCode,
 		String serverAddress, Integer serverPort,
 		String senderId, String senderName, String senderUsername,
-		String senderPassword, String trackName,
-		String statusParamsId) {
+		String senderPassword, String trackName) {
 		super(locale, resultCode,
 			serverAddress, serverPort,
 			senderId, senderName, senderUsername,
-			senderPassword, trackName,
-			statusParamsId);
+			senderPassword, trackName);
 	}
 
 	/* (non-Javadoc)

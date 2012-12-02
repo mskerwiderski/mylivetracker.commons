@@ -41,8 +41,7 @@ public class LinkSenderResponse extends RpcResponse {
 		String locale, ResultCode resultCode,
 		String serverAddress, Integer serverPort,
 		String senderId, String senderName, String senderUsername,
-		String senderPassword, String trackName,
-		String statusParamsId) {
+		String senderPassword, String trackName) {
 		super(locale, resultCode);
 		this.serverAddress = serverAddress;
 		this.serverPort = serverPort;
