@@ -1,7 +1,7 @@
 package de.msk.mylivetracker.commons.rpc;
 
 /**
- * LinkSenderRequest.
+ * ConnectToMyLiveTrackerPortalRequest.
  * 
  * @author michael skerwiderski, (c)2011
  * 
@@ -11,7 +11,7 @@ package de.msk.mylivetracker.commons.rpc;
  * 000 initial 2011-08-14
  * 
  */
-public class LinkSenderRequest extends RpcRequest {
+public class ConnectToMyLiveTrackerPortalRequest extends RpcRequest {
 
 	private static final long serialVersionUID = 5887406148061762562L;
 	
@@ -21,10 +21,10 @@ public class LinkSenderRequest extends RpcRequest {
 	private String portalPassword;
 	private String timeZoneId;
 	
-	public LinkSenderRequest() {		
+	public ConnectToMyLiveTrackerPortalRequest() {		
 	}
 
-	public LinkSenderRequest(String locale, 
+	public ConnectToMyLiveTrackerPortalRequest(String locale, 
 		String senderId, String senderName,
 		String portalUserId, String portalPassword,
 		String timeZoneId) {
@@ -107,14 +107,14 @@ public class LinkSenderRequest extends RpcRequest {
 		this.timeZoneId = timeZoneId;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
-		return "LinkSenderRequest [senderId=" + senderId + ", senderName="
-			+ senderName + ", portalUserId=" + portalUserId
-			+ ", portalPassword=" + portalPassword + ", timeZoneId="
-			+ timeZoneId + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("ConnectToMyLiveTrackerPortalRequest [senderId=")
+			.append(senderId).append(", senderName=").append(senderName)
+			.append(", portalUserId=").append(portalUserId)
+			.append(", portalPassword=").append(portalPassword)
+			.append(", timeZoneId=").append(timeZoneId).append("]");
+		return builder.toString();
 	}
 }

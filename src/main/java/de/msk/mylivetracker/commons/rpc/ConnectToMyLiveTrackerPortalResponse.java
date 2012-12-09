@@ -1,7 +1,7 @@
 package de.msk.mylivetracker.commons.rpc;
 
 /**
- * LinkSenderResponse.
+ * ConnectToMyLiveTrackerPortalResponse.
  * 
  * @author michael skerwiderski, (c)2011
  * 
@@ -11,7 +11,7 @@ package de.msk.mylivetracker.commons.rpc;
  * 000 2011-08-14 initial.
  * 
  */
-public class LinkSenderResponse extends RpcResponse {
+public class ConnectToMyLiveTrackerPortalResponse extends RpcResponse {
 
 	private static final long serialVersionUID = -4817872943024174676L;
 
@@ -23,21 +23,21 @@ public class LinkSenderResponse extends RpcResponse {
 	private String senderPassword;
 	private String trackName;	
 	
-	public LinkSenderResponse() {		
+	public ConnectToMyLiveTrackerPortalResponse() {		
 	}
 	
-	public LinkSenderResponse(
+	public ConnectToMyLiveTrackerPortalResponse(
 		String locale, ResultCode resultCode) {
 		super(locale, resultCode);		
 	}
 	
-	public LinkSenderResponse(
+	public ConnectToMyLiveTrackerPortalResponse(
 		String locale, ResultCode resultCode,
 		String addInfo) {
 		super(locale, resultCode, addInfo);
 	}
 
-	public LinkSenderResponse(
+	public ConnectToMyLiveTrackerPortalResponse(
 		String locale, ResultCode resultCode,
 		String serverAddress, Integer serverPort,
 		String senderId, String senderName, String senderUsername,
@@ -98,7 +98,7 @@ public class LinkSenderResponse extends RpcResponse {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("LinkSenderResponse [serverAddress=")
+		builder.append("ConnectToMyLiveTrackerPortalResponse [serverAddress=")
 			.append(serverAddress).append(", serverPort=")
 			.append(serverPort).append(", senderId=").append(senderId)
 			.append(", senderName=").append(senderName)

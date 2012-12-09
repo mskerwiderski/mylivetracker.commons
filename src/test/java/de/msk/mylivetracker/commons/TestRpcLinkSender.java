@@ -6,8 +6,8 @@ import junit.framework.TestCase;
 
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
 
-import de.msk.mylivetracker.commons.rpc.LinkSenderRequest;
-import de.msk.mylivetracker.commons.rpc.LinkSenderResponse;
+import de.msk.mylivetracker.commons.rpc.ConnectToMyLiveTrackerPortalRequest;
+import de.msk.mylivetracker.commons.rpc.ConnectToMyLiveTrackerPortalResponse;
 import de.msk.mylivetracker.commons.util.datetime.DateTime;
 
 /**
@@ -31,10 +31,10 @@ public class TestRpcLinkSender extends TestCase {
 			String aboutStr = (String)client.invoke("about", new Object[0], String.class);
 			System.out.println(aboutStr);
 			
-			LinkSenderRequest request = new LinkSenderRequest("de", 
+			ConnectToMyLiveTrackerPortalRequest request = new ConnectToMyLiveTrackerPortalRequest("de", 
 				"1234", "MySender", "msk", "1964b3b7171e857e4fb7b1eec12c1807", DateTime.TIME_ZONE_GERMANY);			
-			LinkSenderResponse response = 
-				(LinkSenderResponse)client.invoke("linkSender", new Object[] { request }, LinkSenderResponse.class);
+			ConnectToMyLiveTrackerPortalResponse response = 
+				(ConnectToMyLiveTrackerPortalResponse)client.invoke("linkSender", new Object[] { request }, ConnectToMyLiveTrackerPortalResponse.class);
 			System.out.println(
 				"[" + response.getResultCode() + "] " + 
 				response.getResultMessage());

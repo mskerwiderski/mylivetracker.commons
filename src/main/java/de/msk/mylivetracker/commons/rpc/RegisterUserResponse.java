@@ -11,7 +11,7 @@ package de.msk.mylivetracker.commons.rpc;
  * 000 initial 2011-12-26
  * 
  */
-public class RegisterUserResponse extends LinkSenderResponse {
+public class RegisterUserResponse extends ConnectToMyLiveTrackerPortalResponse {
 
 	private static final long serialVersionUID = -7353691274871842016L;
 	
