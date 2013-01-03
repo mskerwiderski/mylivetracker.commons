@@ -11,18 +11,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * DateTime.
+ * classname: DateTime
  * 
- * @author michael skerwiderski, (c)2011
- * 
+ * @author michael skerwiderski, (c)2012
  * @version 000
+ * @since 1.5.0
  * 
- * history
- * 000 initial 2011-08-22
- * 
- * rule:
- * o internal time zone of DateTime-objects is Etc/UTC.
- * o for all set- and get-methods: if no time zone is specified, default time zone is system time zone.
+ * history:
+ * 000	2013-01-03	revised for v1.5.x.
  * 
  */
 public class DateTime implements Serializable {	

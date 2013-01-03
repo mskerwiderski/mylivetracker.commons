@@ -1,17 +1,17 @@
 package de.msk.mylivetracker.commons.rpc;
 
 /**
- * ConnectToMyLiveTrackerPortalResponse.
+ * classname: RegisterSenderResponse
  * 
- * @author michael skerwiderski, (c)2011
- * 
+ * @author michael skerwiderski, (c)2012
  * @version 000
+ * @since 1.5.0
  * 
- * history
- * 000 2011-08-14 initial.
+ * history:
+ * 000	2013-01-03	revised for v1.5.x.
  * 
  */
-public class ConnectToMyLiveTrackerPortalResponse extends RpcResponse {
+public class RegisterSenderResponse extends RpcResponse {
 
 	private static final long serialVersionUID = -4817872943024174676L;
 
@@ -23,21 +23,21 @@ public class ConnectToMyLiveTrackerPortalResponse extends RpcResponse {
 	private String senderPassword;
 	private String trackName;	
 	
-	public ConnectToMyLiveTrackerPortalResponse() {		
+	public RegisterSenderResponse() {		
 	}
 	
-	public ConnectToMyLiveTrackerPortalResponse(
+	public RegisterSenderResponse(
 		String locale, ResultCode resultCode) {
 		super(locale, resultCode);		
 	}
 	
-	public ConnectToMyLiveTrackerPortalResponse(
+	public RegisterSenderResponse(
 		String locale, ResultCode resultCode,
 		String addInfo) {
 		super(locale, resultCode, addInfo);
 	}
 
-	public ConnectToMyLiveTrackerPortalResponse(
+	public RegisterSenderResponse(
 		String locale, ResultCode resultCode,
 		String serverAddress, Integer serverPort,
 		String senderId, String senderName, String senderUsername,
@@ -98,7 +98,7 @@ public class ConnectToMyLiveTrackerPortalResponse extends RpcResponse {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ConnectToMyLiveTrackerPortalResponse [serverAddress=")
+		builder.append("RegisterSenderResponse [serverAddress=")
 			.append(serverAddress).append(", serverPort=")
 			.append(serverPort).append(", senderId=").append(senderId)
 			.append(", senderName=").append(senderName)

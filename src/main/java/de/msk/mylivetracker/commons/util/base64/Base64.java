@@ -2,6 +2,18 @@ package de.msk.mylivetracker.commons.util.base64;
 
 import java.util.Arrays;
 
+/**
+ * classname: Base64
+ * 
+ * @author michael skerwiderski, (c)2012
+ * @version 000
+ * @since 1.5.0
+ * 
+ * history:
+ * 000	2013-01-03	revised for v1.5.x.
+ * 
+ */
+
 /** A very fast and memory efficient class to encode and decode to and from BASE64 in full accordance
  * with RFC 2045.<br><br>
  * On Windows XP sp1 with 1.4.2_04 and later ;), this encoder and decoder is about 10 times faster
@@ -69,7 +81,6 @@ import java.util.Arrays;
  *         Date: 2004-aug-02
  *         Time: 11:31:11
  */
-
 public class Base64
 {
 	private static final char[] CA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.msk.mylivetracker.commons.protocol;
 
 import java.security.KeyFactory;
@@ -12,14 +9,14 @@ import java.security.spec.RSAPublicKeySpec;
 import de.msk.mylivetracker.commons.protocol.KeyDsc.KeyType;
 
 /**
- * KeyDscCreator.
+ * classname: KeyDscCreator
  * 
- * @author michael skerwiderski, (c)2011
- * 
+ * @author michael skerwiderski, (c)2012
  * @version 000
+ * @since 1.5.0
  * 
- * history
- * 000 initial 2011-08-11
+ * history:
+ * 000	2013-01-03	revised for v1.5.x.
  * 
  */
 public class KeyDscCreator {

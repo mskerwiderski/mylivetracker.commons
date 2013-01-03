@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils;
  * @since 1.5.0
  * 
  * history:
- * 000	2013-01-02	initial.
+ * 000	2013-01-03	revised for v1.5.x.
  * 
  */
 public class LatLonUtils {

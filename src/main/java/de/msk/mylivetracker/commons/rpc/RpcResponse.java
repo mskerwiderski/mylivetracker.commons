@@ -7,14 +7,14 @@ import java.util.ResourceBundle;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * RpcResponse.
+ * classname: RpcResponse
  * 
- * @author michael skerwiderski, (c)2011
- * 
+ * @author michael skerwiderski, (c)2012
  * @version 000
+ * @since 1.5.0
  * 
- * history
- * 000 initial 2011-08-15
+ * history:
+ * 000	2013-01-03	revised for v1.5.x.
  * 
  */
 public abstract class RpcResponse implements Serializable {
