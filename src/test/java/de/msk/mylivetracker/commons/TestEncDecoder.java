@@ -22,7 +22,7 @@ import de.msk.mylivetracker.commons.protocol.UploadDataPacket;
 public class TestEncDecoder extends TestCase {
 	
 	public static void main(String[] argv) {
-		String dataStr ="MLT:Key1024:VRqcCOcA33fsYanugG7JJBgpf4LXa0atJiBtU+6Wjq6D5/qsUMC+GeDaSUmOnogZsZHDp/HLnTav48StfQ7/jiy2SrjMoAdONcTgv/y68aJ14Z1LxM05KP2/PUyiitUYAZ7pks2lc6Pns44MYAloGh/S1NpNRRHMxY06fuDKdJ14Gs/IUOO4Bc7Aww/3U353ZTzt0l4o8djU+XG6hmG+iEnFvHkiK/MpehlCexhEg0tomW+HPcYrfBo7Gl2+y4fdlUl2hgf9zI0JrX/7mKw7fesobP8jOy0shHTy8vMkLX0Wd3bH935cL2qEIhXfq6686fJduGpVqjCrh6U4qVEq8g==*fdc82aaf7c2333168796826634fe392c#";
+		String dataStr ="MLT:Key1024:u6TGnk1VAoJXLFPU9RY23qE+IR9TZCQCNZjqnCVqS3/B4Lt4scakDHy1qcO0AFcwoGig18S+M05KhcQwoYsrcRWeHupDogXdJJZAUEk4raN6oIr71tmpeoaF8pCDxtjYpvC8yE5e6xISZW2nvXchNlWiZg4nd6LSnn/VI0sOC8aexC2hMLzPb/TgyCN+7qvifmyVlqrZes52GbwbJT8oOhjNynoFgz3FOjC+ER4aGCrqR0Qhcpin5oXbsV+Jdr7Qaq/MWrp1hUcfwODXgLCapqHSlbedjS2lc8VV+j03relFRkHfP5UPcI21lHLVP1lE2B3K2IcFOb7uWtuFn09ltw==*ce9b05048923ac58c32ac5f1d858cb65#";
 		KeyStore keyStoreServer = new KeyStore(Keys.keyDscArrServer);
 		EncDecoder decoder = new EncDecoder(keyStoreServer, true);
 		System.out.println(decoder.decode(dataStr));
