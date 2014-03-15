@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * classname: RpcResponse

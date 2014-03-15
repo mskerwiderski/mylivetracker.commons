@@ -1,6 +1,6 @@
 package de.msk.mylivetracker.commons.protocol;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import de.msk.mylivetracker.commons.util.md5.MD5;
 

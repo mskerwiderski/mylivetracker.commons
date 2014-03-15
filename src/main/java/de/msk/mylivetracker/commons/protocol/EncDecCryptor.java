@@ -2,8 +2,8 @@ package de.msk.mylivetracker.commons.protocol;
 
 import javax.crypto.Cipher;
 
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import de.msk.mylivetracker.commons.util.base64.Base64;
 
